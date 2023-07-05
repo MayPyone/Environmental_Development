@@ -54,7 +54,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://maypyone.github.io/My_Portfolio/)
+- [Live Demo Link](https://maypyone.github.io/Environmental_Development/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
