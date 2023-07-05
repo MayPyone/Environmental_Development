@@ -37,31 +37,31 @@ const speakers = [
   },
   {
     name: 'SohYeong Noh',
-    image: "<img src='images/stwo.png' alt=''/>",
+    image: "<img src='images/stwo.png' alt='speaker'/>",
     occupation: 'Director of Art Centre Nabi and a board member of CC Korea',
     description: 'As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.',
   },
   {
     name: 'Lila tretikov',
-    image: "<img src='images/sthree.png' alt=''/>",
+    image: "<img src='images/sthree.png' alt='speaker'/>",
     occupation: 'Executive Director of the Wikimedia Foundation',
     description: 'Lila Tretikov is the Executive of the Wikimedia Foundation, the nonprofit organization that operates Wikipedia. Wikipedia is freely available in 290 languag-es and used by nearly half a billion people around the world every month.',
   },
   {
     name: 'Kilnam Chon',
-    image: "<img src='images/sfour.png' alt=''/>",
-    occupation: '',
+    image: "<img src='images/sfour.png' alt='speaker'/>",
+    occupation: 'MD of Creativve Commons, ex COO of the Mozilla Foundation',
     description: 'Kilnam Chon helped bring the internet to Asia and is an outspoken advocate for the open web and digital com-mons. In 2012. he was inducted into the inaugural class of the Internet Society’s (ISOC) Internet Hall of Fame',
   },
   {
     name: 'Julia Leda',
-    image: '<img src="images/sfive.png" alt=""/>',
+    image: '<img src="images/sfive.png" alt="speaker"/>',
     occupation: 'President of Young Pirates of Europe',
     description: 'European ingetration, political democracy and participation of youth through online as her major condern, Reda’s report outlining potential changes to EU copyright law was approved by the Parliament in July',
   },
   {
     name: 'Ryan Merkley',
-    image: '<img src= "images/ssix.png" alt= ""/>',
+    image: '<img src= "images/ssix.png" alt= "speaker"/>',
     occupation: 'CEO of Creativve Commons, ex COO of the Mozilla Foundation',
     description: 'Ryan had been leading open-source projects at the Mozilla Foundation such as the open-source move-ment',
   },
@@ -71,8 +71,8 @@ const speakergroup = document.querySelector('.group');
 const main = document.createElement('section');
 main.className = 'main';
 const maincontainer = document.createElement('div');
-const container = document.createElement('div');
-const container2 = document.createElement('div');
+const container = document.createElement('article');
+const container2 = document.createElement('article');
 container2.className = 'container2';
 container.className = 'container';
 maincontainer.className = 'maincontainer';
@@ -103,9 +103,26 @@ function speaker() {
    + '</span>';
   }
   container2.innerHTML += "<button class='more'>MORE <img src='images/down.png' alt=''/></button>";
-  maincontainer.append(container2);
-  maincontainer.append(container);
-  main.append(maincontainer);
-  speakergroup.append(main);
 }
+function mybutton() {
+  see.style.display= 'none';
+  for (let i = 2; i < speakers.length; i += 1) {
+    container2.innerHTML += `${'<span class = "myinner">'
+   + '<div class= "myimage">'}${speakers[i].image}</div>`
+   + '<div class="pic">'
+   + `<h2>${speakers[i].name}</h2>`
+   + `<p>${speakers[i].occupation}</p>`
+   + '<div class= "myborder"></div>'
+   + `<p class= "p2">${speakers[i].description}</p>`
+   + '</div>'
+   + '</span>';
+  }
+}
+
 speaker();
+maincontainer.append(container2);
+maincontainer.append(container);
+main.append(maincontainer);
+speakergroup.append(main);
+const see = document.querySelector('.more');
+see.addEventListener('click', mybutton);
