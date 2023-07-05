@@ -52,7 +52,7 @@ nav .openMenu {
 .logo img {
   width: 100px;
   padding-right: 10%;
-  filter: drop-shadow(0 -3mm 2mm green);
+  filter: drop-shadow(0 -1mm 2mm green);
 }
 
 .closeMenu1 img {
