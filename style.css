@@ -338,7 +338,7 @@ u {
 }
 
 .footer p {
-  margin-bottom: 3%;
+  margin-bottom: 1.5%;
   font-size: 14px;
   border: none;
 }
@@ -347,6 +347,17 @@ u {
   display: flex;
   font-size: 30px;
   align-items: center;
+  font-weight: 1000;
+}
+
+.f1 {
+  margin-bottom: 0%;
+  padding: 0;
+}
+
+.f2 {
+  margin-top: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
