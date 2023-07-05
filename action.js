@@ -104,8 +104,9 @@ function speaker() {
   }
   container2.innerHTML += "<button class='more'>MORE <img src='images/down.png' alt=''/></button>";
 }
+const see = document.querySelector('.more');
 function mybutton() {
-  see.style.display= 'none';
+  see.style.display = 'none';
   for (let i = 2; i < speakers.length; i += 1) {
     container2.innerHTML += `${'<span class = "myinner">'
    + '<div class= "myimage">'}${speakers[i].image}</div>`
@@ -124,5 +125,4 @@ maincontainer.append(container2);
 maincontainer.append(container);
 main.append(maincontainer);
 speakergroup.append(main);
-const see = document.querySelector('.more');
 see.addEventListener('click', mybutton);
