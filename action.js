@@ -104,6 +104,11 @@ function speaker() {
   }
   container2.innerHTML += "<button class='more'>MORE <img src='images/down.png' alt=''/></button>";
 }
+speaker();
+maincontainer.append(container2);
+maincontainer.append(container);
+main.append(maincontainer);
+speakergroup.append(main);
 const see = document.querySelector('.more');
 function mybutton() {
   see.style.display = 'none';
@@ -119,10 +124,4 @@ function mybutton() {
    + '</span>';
   }
 }
-
-speaker();
-maincontainer.append(container2);
-maincontainer.append(container);
-main.append(maincontainer);
-speakergroup.append(main);
 see.addEventListener('click', mybutton);
